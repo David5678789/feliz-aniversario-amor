@@ -35,6 +35,32 @@
 }
 
 /* ===========================
+   BOTÃO VOLTAR AO INÍCIO
+   =========================== */
+
+.btn-voltar {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+    margin-top: 2rem;
+}
+
+.btn-voltar:hover {
+    background: var(--gold);
+    color: var(--dark-ink);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 166, 107, 0.3);
+}
+
+/* ===========================
    RESPONSIVO
    =========================== */
 
@@ -47,6 +73,11 @@
     #final h2 {
         font-size: 1.3rem;
     }
+
+    .btn-voltar {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -57,9 +88,15 @@
     #final p {
         font-size: 0.95rem;
         margin: 1.5rem auto;
+        line-height: 1.6;
     }
 
     #final h2 {
         font-size: 1.1rem;
+    }
+
+    .btn-voltar {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 }

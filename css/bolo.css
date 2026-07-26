@@ -51,7 +51,7 @@
 }
 
 /* ===========================
-   BOLO
+   BOLO ELEGANTE
    =========================== */
 
 #bolo {
@@ -63,9 +63,112 @@
     margin-bottom: 2rem;
 }
 
-.cake {
+.cake-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 2rem 0;
 }
+
+/* ===========================
+   CAMADAS DO BOLO
+   =========================== */
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cake-layer {
+    position: absolute;
+    width: 100%;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(201, 166, 107, 0.15) 0%, rgba(201, 166, 107, 0.05) 100%);
+}
+
+.cake-bottom {
+    width: 200px;
+    height: 40px;
+    bottom: 0;
+    background: linear-gradient(135deg, #8b6f47 0%, #6b5a3d 100%);
+}
+
+.cake-middle {
+    width: 170px;
+    height: 40px;
+    bottom: 40px;
+    background: linear-gradient(135deg, #a0845a 0%, #7a6845 100%);
+}
+
+.cake-top {
+    width: 140px;
+    height: 40px;
+    bottom: 80px;
+    background: linear-gradient(135deg, #b89968 0%, #8b6f47 100%);
+}
+
+/* ===========================
+   VELAS E CHAMAS
+   =========================== */
+
+.candles {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 30px;
+    z-index: 10;
+}
+
+.candle {
+    position: relative;
+    width: 4px;
+    height: 30px;
+    background: linear-gradient(to bottom, #f3ede2 0%, #e8d7c3 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(243, 237, 226, 0.5);
+}
+
+.flame {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 15px;
+    background: linear-gradient(to top, #ff9800 0%, #ffc107 50%, #ffeb3b 100%);
+    border-radius: 50% 50% 50% 0;
+    animation: flameFlicker 0.6s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+}
+
+@keyframes flameFlicker {
+    0%, 100% {
+        transform: translateX(-50%) scaleY(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scaleY(0.9);
+        opacity: 0.8;
+    }
+}
+
+.candle.apagada .flame {
+    opacity: 0;
+    animation: none;
+}
+
+/* ===========================
+   BOTÃO APAGAR VELAS
+   =========================== */
 
 #apagarVelas {
     background: linear-gradient(135deg, var(--wine) 0%, #7a3849 100%);
@@ -80,6 +183,7 @@
     transition: all 0.3s ease;
     letter-spacing: 0.05em;
     box-shadow: 0 10px 30px rgba(92, 36, 49, 0.3);
+    margin-top: 2rem;
 }
 
 #apagarVelas:hover {
@@ -101,6 +205,44 @@
         padding: 0.7rem 1.5rem;
         font-size: 0.9rem;
     }
+
+    .cake {
+        width: 150px;
+        height: 120px;
+    }
+
+    .cake-layer {
+        border-width: 1.5px;
+    }
+
+    .cake-bottom {
+        width: 150px;
+        height: 35px;
+    }
+
+    .cake-middle {
+        width: 120px;
+        height: 35px;
+    }
+
+    .cake-top {
+        width: 90px;
+        height: 35px;
+    }
+
+    .candles {
+        gap: 20px;
+        top: 15px;
+    }
+
+    .candle {
+        height: 25px;
+    }
+
+    .flame {
+        bottom: 25px;
+        height: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -112,5 +254,41 @@
     #apagarVelas {
         padding: 0.6rem 1.2rem;
         font-size: 0.85rem;
+    }
+
+    .cake {
+        width: 120px;
+        height: 100px;
+    }
+
+    .cake-bottom {
+        width: 120px;
+        height: 30px;
+    }
+
+    .cake-middle {
+        width: 95px;
+        height: 30px;
+    }
+
+    .cake-top {
+        width: 70px;
+        height: 30px;
+    }
+
+    .candles {
+        gap: 15px;
+        top: 10px;
+    }
+
+    .candle {
+        width: 3px;
+        height: 20px;
+    }
+
+    .flame {
+        bottom: 20px;
+        width: 5px;
+        height: 10px;
     }
 }
