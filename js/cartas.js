@@ -39,15 +39,8 @@ function inicializarEnvelopes() {
 }
 
 function abrirEnvelope(envelope) {
-    const jaAberto = envelope.classList.contains("aberto");
-    
-    if (jaAberto) {
-        // Fechar envelope
-        envelope.classList.remove("aberto");
-    } else {
-        // Abrir envelope
-        envelope.classList.add("aberto");
-    }
+    // Toggle da classe aberto
+    envelope.classList.toggle("aberto");
 }
 
 // Fechar envelopes ao clicar fora deles
