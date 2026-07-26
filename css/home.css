@@ -209,7 +209,9 @@ section.hidden {
     border-radius: 20px;
     text-align: center;
     max-width: 600px;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 1;
+    visibility: visible;
 }
 
 .glass h3 {
