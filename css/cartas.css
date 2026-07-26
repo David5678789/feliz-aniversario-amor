@@ -1,0 +1,110 @@
+/* ===========================
+   CARTAS
+   =========================== */
+
+#cartas {
+    background: linear-gradient(135deg, var(--soft-black) 0%, var(--dark-ink) 100%);
+    flex-direction: column;
+}
+
+#cartas h2 {
+    margin-bottom: 0.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.carta {
+    background: rgba(201, 166, 107, 0.05);
+    border: 2px solid var(--gold);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.carta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201, 166, 107, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.carta:hover::before {
+    left: 100%;
+}
+
+.carta:hover {
+    background: rgba(201, 166, 107, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(201, 166, 107, 0.2);
+}
+
+.carta h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.carta p {
+    color: var(--light-gold);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+#irBolo {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+#irBolo:hover {
+    background: var(--gold);
+    color: var(--dark-ink);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carta {
+        padding: 1.5rem;
+    }
+
+    .carta h3 {
+        font-size: 1.5rem;
+    }
+
+    #irBolo {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

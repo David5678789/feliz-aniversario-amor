@@ -1,0 +1,9 @@
+{
+  "name": "feliz-aniversario-amor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site surpresa de aniversário",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

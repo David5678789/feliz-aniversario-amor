@@ -1,0 +1,116 @@
+/* ===========================
+   VÍDEO
+   =========================== */
+
+#videoSection {
+    background: linear-gradient(135deg, var(--soft-black) 0%, var(--dark-ink) 100%);
+}
+
+#videoSection .container {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+#videoSection h2 {
+    margin-bottom: 1rem;
+}
+
+#videoSection p {
+    margin-bottom: 2rem;
+    color: var(--light-gold);
+}
+
+#videoPrincipal {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 2px solid var(--gold);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+#continuarGaleria {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+#continuarGaleria:hover {
+    background: var(--gold);
+    color: var(--dark-ink);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   BOLO
+   =========================== */
+
+#bolo {
+    background: linear-gradient(135deg, var(--dark-ink) 0%, var(--soft-black) 100%);
+    flex-direction: column;
+}
+
+#bolo h2 {
+    margin-bottom: 2rem;
+}
+
+.cake {
+    margin: 2rem 0;
+}
+
+#apagarVelas {
+    background: linear-gradient(135deg, var(--wine) 0%, #7a3849 100%);
+    color: var(--ivory);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+    box-shadow: 0 10px 30px rgba(92, 36, 49, 0.3);
+}
+
+#apagarVelas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(92, 36, 49, 0.4);
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+
+@media (max-width: 768px) {
+    #videoPrincipal {
+        max-width: 100%;
+    }
+
+    #continuarGaleria,
+    #apagarVelas {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #videoSection p {
+        font-size: 0.95rem;
+    }
+
+    #continuarGaleria,
+    #apagarVelas {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}

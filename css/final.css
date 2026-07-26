@@ -1,0 +1,65 @@
+/* ===========================
+   FINAL
+   =========================== */
+
+#final {
+    background: linear-gradient(135deg, var(--soft-black) 0%, var(--dark-ink) 100%);
+    flex-direction: column;
+    text-align: center;
+}
+
+#final h1 {
+    margin-bottom: 1rem;
+}
+
+#final .ornament {
+    margin: 2rem auto;
+}
+
+#final p {
+    max-width: 600px;
+    margin: 2rem auto;
+    color: var(--light-gold);
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+#final h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+#final h2 .signature {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+
+@media (max-width: 768px) {
+    #final p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    #final h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #final h1 {
+        font-size: 1.5rem;
+    }
+
+    #final p {
+        font-size: 0.95rem;
+        margin: 1.5rem auto;
+    }
+
+    #final h2 {
+        font-size: 1.1rem;
+    }
+}
